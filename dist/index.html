@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.min.css" />
+    <link rel="icon" href="img/maxresdefault.png">
+    <title>Omni.Sale тестовое задание</title>
+  </head>
+  <body>
+    <div class="auth">
+          <form class="form" action="#">
+            <a class="form__link" href="#" title="На главную">вернуться</a>
+            <div class="form__logo">
+              <img class="form__img" src="img/maxresdefault.png" alt="Логотип формы" title="Логотип формы" />
+            </div>
+            <div class="form__inputs">
+              <input class="form__input" id="phone" type="tel" placeholder="Номер телефона" 
+              required autocomplete="off" minlength="11" maxlength="11"/>
+              <label class="form__input-label" for="phone"></label>
+              <input class="form__input" id="password" type="password" placeholder="Пароль" 
+              required autocomplete="off" minlength="5" maxlength="20"/>
+              <label class="form__input-label icon-star" for="password"></label>
+            </div>
+            <div class="form__controls">
+              <input class="form__checkbox" type="checkbox" id="checkbox" />
+              <label class="form__label" for="checkbox">Запомнить</label>
+             <a class="form__recover-link" href="#" title="Восстановить пароль">Забыл пароль</a>
+            </div>
+            <button class="form__btn" type="submit">Войти</button>
+          </form>
+        </div>
+    <script src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica', 'sans-serif';
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.auth {
+  position: relative;
+  background: #000 url('../img/main-bg.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;  
+    top: 0;
+    left: 0;
+    background-color: rgba(0 ,0 ,0 , 0.6);
+  }
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 626px;
+  height: 434px;
+  margin: 0px auto;
+  padding: 30px 50px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  backdrop-filter: blur(10px) brightness(250%);
+    &:valid .form__input:valid:not(:focus) {
+      color: rgba(255 ,255 ,255 , 1);
+      border: 1px solid rgba(255,255,255, 1);
+    }
+    &:valid .form__btn {
+      opacity: 1;
+    }
+    &__link {
+    position: relative;
+    padding-left: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('../img/arrow-back.png');
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 9px;
+    }
+  }
+  &__logo {
+    padding-top: 3px;
+    padding-bottom: 7px;
+    align-self: center;
+  }
+  &__img {
+    width: 97px;
+    height: 97px;
+  }
+  &__input {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 25px;
+    outline: none;
+    background-color: transparent;
+    color: rgba(255 ,255 ,255 ,0.4);
+    &:nth-child(3) { 
+      margin-top: 15px;
+    }
+    &:nth-child(3):focus { 
+      letter-spacing: 7px;
+    }
+    &:nth-child(3):focus::placeholder { 
+      color: transparent;
+    }
+    &:nth-child(3):valid { 
+      letter-spacing: 7px;
+    }
+    &::placeholder {
+      color: rgba(255 ,255 ,255 ,0.4);
+    }
+    &:focus {
+      background-color: #fff;
+      color: gray;
+    }
+    &:focus::placeholder {
+      color: gray;
+    }
+    &:valid + .form__input-label::before {
+      content: '';
+      position: absolute;
+      background: url('../img/success.png');
+      right: 20px;
+      bottom: 15px;
+      width: 18px;
+      height: 17px;
+      cursor: pointer;
+      opacity: 1;
+    }
+    &:invalid:focus {
+      color: #B40000;
+    }
+    &:invalid:focus + .form__input-label::before {
+      content: '';
+      position: absolute;
+      background: url('../img/warning.png');
+      bottom: 8px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+  &__input-label {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  &__inputs {
+    position: relative;
+    align-self: center;
+    width: 70%;
+  }
+  &__controls {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-self: center;
+  }
+  &__label {
+    padding-left: 50px;
+    cursor: pointer;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background: url('../img/checkbox.png');
+      top: -5px;
+      left: 0;
+      width: 44px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    border: none;
+    &:checked + .form__label::before {
+      background: url('../img/checkbox-active.png');
+    }
+  }
+  &__recover-link {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 0.5px solid rgba(255,255,255,0.5);
+  }
+  &__btn {
+    margin-top: 23px;
+    padding: 16px;
+    width: 151px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    align-self: center;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.4;
+    &:hover{
+      background-color: rgba(0,0,0,0.2);
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .form {
+    padding: 20px;
+  }
+  .form__inputs {
+    width: 100%;
+  }
+  .form__controls {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form__recover-link {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+@import 'normalize.scss'
