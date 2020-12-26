@@ -71,7 +71,8 @@ function build() {
     'app/style/style.min.css', //стили
     'app/fonts/**/*', //шрифты все папки все файлы
     'app/js/main.min.js', //скрипты
-    'app/*.html' //html
+    'app/*.html', //html
+    'app/*.php' //php
 
   ], {base: 'app'})
   .pipe(dest('dist'))
