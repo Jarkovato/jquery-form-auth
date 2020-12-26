@@ -1,0 +1,33 @@
+// @media (max-width: 1140px) {
+//   .animate {
+//     animation: blur 3s;
+//     animation-delay: 0.5s;
+//   }
+//   @keyframes blur {
+//     0%{backdrop-filter: blur(0px) brightness(100%)}
+//     // 25%{backdrop-filter: blur(3px) brightness(125%)}
+//     // 50%{backdrop-filter: blur(5px) brightness(150%)}
+//     // 75%{backdrop-filter: blur(7px) brightness(200%)}
+//     100%{backdrop-filter: blur(10px) brightness(250%)}
+//   }
+// } 
+
+@media (max-width: 630px) {
+  .form {
+    padding: 20px;
+    width: 90%;
+  }
+  
+  .form__inputs {
+    width: 100%;
+  }
+  .form__controls {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form__recover-link {
+    display: block;
+    margin-top: 15px;
+  }
+}

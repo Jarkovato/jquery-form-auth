@@ -2,6 +2,20 @@
 $(function(){
   //маска телефона
   $('input[type="tel"]').mask("9 (999) 999-99-99");
+  //анимация при изменении экрана
+  $(window).on('resize', function(){
+    if ($('#form').hasClass('animate')) {
+      $('#form').removeClass('animate');
+      setTimeout(() => {
+        $('#form').toggleClass('animate');
+      }, 100);
+    }
+    else {
+      $('#form').toggleClass('animate');
+    }
+  })
+
+
   //отправка формы
   $('#form').on('submit', (function( e ) {
     const phone = $('#phone').val();

@@ -203,23 +203,15 @@ body {
   }
 }
 
-@media (max-width: 630px) {
-  .form {
-    padding: 20px;
-    width: 90%;
-  }
-  .form__inputs {
-    width: 100%;
-  }
-  .form__controls {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .form__recover-link {
-    display: block;
-    margin-top: 15px;
-  }
+.animate {
+  animation: blur 2s;
+  animation-delay: 0.5s;
+}
+@keyframes blur {
+  0%{backdrop-filter: blur(10px) brightness(250%)}
+  50%{backdrop-filter: blur(0px) brightness(100%)}
+  100%{backdrop-filter: blur(10px) brightness(250%)}
 }
 
-@import 'normalize.scss'
+@import 'media.scss';
+@import 'normalize.scss';
