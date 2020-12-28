@@ -30,6 +30,8 @@ $(function(){
       processData: false, //запрет на преобразование данных в строку
       success: () => {
         alert(`Добро пожаловать! Ваш логин: ${phone}`);
+        $('#phone').val('');
+        $('#password').val('');
       }
     })
     e.preventDefault();
